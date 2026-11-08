@@ -1,0 +1,9 @@
+[package]
+name = "horizon-plugin-abi"
+version = "0.2.0"
+edition = "2024"
+license = "MIT"
+publish = false
+description = "C ABI between a Horizon server's plugin host and cdylib server plugins (ABI 1)"
+
+[dependencies]

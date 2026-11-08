@@ -1,0 +1,20 @@
+[package]
+name = "mod-pluginhost"
+version = "0.2.0"
+edition = "2024"
+license = "MIT"
+publish = false
+
+[features]
+# Hooks and helpers that are not upstream yet (Horizon branch `hooks-all`): console lines, block
+# placement, the quit before removal, hits between players, permission nodes. Without it the host
+# uses upstream hooks only: no console/place/damage events, quit after removal, level checks only.
+default = ["hooks-all"]
+hooks-all = []
+
+[dependencies]
+# The launcher points this at the Horizon source the server is built from.
+horizon-client = { git = "https://github.com/horizon-rust/horizon" }
+horizon-plugin-loader = { path = "../../loader" }
+# In Horizon's Cargo.lock.
+log = "0.4"

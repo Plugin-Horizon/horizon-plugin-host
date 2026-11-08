@@ -1,0 +1,6 @@
+# The plugin side: the ABI crate, the loader and the example plugin. They build without the
+# engine, in seconds. The host (host/) is a Horizon trait mod and builds with the server.
+[workspace]
+members = ["abi", "loader", "examples/greeter"]
+exclude = ["host"]
+resolver = "3"

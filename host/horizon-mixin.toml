@@ -1,0 +1,11 @@
+# Plugin host: a native trait mod that loads cdylib server plugins from plugins/ and reloads them
+# without a restart.
+[mod]
+id = "pluginhost"
+version = "0.2.0"
+
+[api]
+path = "api"
+
+[compatibility]
+horizon_revision = "b13dbf0687b545431172466ab4b91d19c3976405"
